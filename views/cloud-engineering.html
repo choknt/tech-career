@@ -1,90 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <meta name="description" content="" /> 
-        <link rel="icon" type="image/png" sizes="32x32" href="./../assets/favicon.ico">
-        <link rel="stylesheet" href="views.css" type="text/css"/>
-        <title>นักวิเคราะห์อาวุธทางการทหาร mwt</title> 
-    </head>
-    <body> 
-        <main>
-            <article>
-                <h1>นักวิเคราะห์อาวุธทางการทหาร (mwt)</h1>
-                <img src="./../assets/career-images/cloud.jpg" alt="cloud-photo"/>
-                <div>
-                </p> <h2>คุณจะทำอะไร?</h2>
-                        <ul class="lists">
-                            <li class="list-item">ทำการตรวจสอบว่าอาวุธนั้นเป็นของประเทศอะไรชนิดอะไร</li>
-                            <li class="list-item">ตรวจสอบว่ารถถังนั้นจะเป็นอะไรหรืออะไรทุกอย่าง</li> 
-                            <li class="list-item">มั่นใจในความถูกต้องของข้อมูลก่อนประกาศเกี่ยวกับอุปกรณ์ทางทหาร</li>
-                            <li class="list-item">ให้ข้อมูลเชิงลึกเกี่ยวกับชนิดของอาวุธและกลยุทธ์ที่เป็นไปได้จากข้อมูลที่รวบรวม </li>
-                        </ul>/ <p>
-                    
-                    <h2>สิ่งที่คุณควรมี</h2>
-                        <ul class="lists">
-                            <li class="list-item">ทักษะในการแก้ปัญหาและวิเคราะห์ที่แข็งแกร่ง: เราเน้นการแก้ปัญหาที่ต้นเหตุไม่ใช่แค่แก้ปัญหาชั่วคราว</li>
-                            <li class="list-item">ความสามารถในการทำงานในสภาพแวดล้อมที่เปลี่ยนแปลงอย่างรวดเร็ว</li> 
-                            <li class="list-item">ทักษะการสื่อสารที่ยอดเยี่ยม: คุณสามารถนำเสนอแนวคิด อัปเดต และผลลัพธ์ได้อย่างชัดเจน</li>
-                            <li class="list-item">ความหลงใหลในเทคโนโลยีและอาวุธสงคราม ทั้งยุคเก่าและใหม่ </li>
-                        </ul>
-
-                    <h2>โบนัส (สิ่งที่คุณจะได้รับ)</h2>
-                        <ul class="lists">
-                            <li class="list-item">ประสบการณ์ตรงในการสร้างและดำเนินงาน</li>
-                            <li class="list-item">ข้อมูลเกี่ยวกับเทคโนโลยีทางการทหารใหม่ๆ ทุกเดือน</li> 
-                            <li class="list-item">การทำงานร่วมกับ CEO โดยตรง</li>                            
-                        </ul>
-                    
-                    <p><strong>#ทำงานระยะไกล</strong></p>
-                    <form id="contact-form" method="POST" action="https://getform.io/f/aroooyxb">
-    <input type="hidden" name="job_position" value="Military Weapons Analyst"> <!-- ตำแหน่งงานที่ซ่อนอยู่ -->
-
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-
-    <label for="message">Message:</label>
-    <textarea id="message" name="message" required></textarea>
-
-    <button type="submit">Send</button>
-</form>
-
-<!-- ส่วนที่จะแสดงข้อความยืนยัน -->
-<div id="confirmation-message" style="display: none;">Your message has been sent successfully!</div>
-
-<script>
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // ป้องกันไม่ให้ฟอร์มรีเฟรชหน้าเว็บ
-
-    // รวบรวมข้อมูลจากฟอร์ม
-    const formData = new FormData(this);
-
-    // ส่งข้อมูลฟอร์มด้วย AJAX
-    fetch('https://getform.io/f/aroooyxb', {  // URL ของ Getform
-        method: 'POST',
-        body: formData
-    })
-    .then(response => {
-        if (response.ok) {
-            // แสดงข้อความยืนยันเมื่อส่งฟอร์มสำเร็จ
-            document.getElementById('confirmation-message').style.display = 'block';
-            // ล้างข้อมูลในฟอร์มหลังจากส่งสำเร็จ
-            document.getElementById('contact-form').reset();
-        } else {
-            alert('Failed to send the message. Please try again.');
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="" /> 
+    <link rel="icon" type="image/png" sizes="32x32" href="./../assets/favicon.ico">
+    <link rel="stylesheet" href="views.css" type="text/css"/>
+    <title>นักวิเคราะห์อาวุธทางการทหาร mwt</title> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
         }
-    })
-    .catch(error => {
-        alert('There was an error submitting the form. Please try again later.');
-    });
-});
-</script>
-            </div>
-        </main>
-    </body>
-</html> 
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .lists {
+            padding-left: 20px;
+        }
+        .list-item {
+            margin-bottom: 10px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #confirmation-message {
+            margin-top: 20px;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <article>
+            <h1>นักวิเคราะห์อาวุธทางการทหาร (mwt)</h1>
+            <img src="./../assets/career-images/cloud.jpg" alt="cloud-photo" />
+            
+            <h2>คุณจะทำอะไร?</h2>
+            <ul class="lists">
+                <li class="list-item">ทำการตรวจสอบว่าอาวุธนั้นเป็นของประเทศอะไรชนิดอะไร</li>
+                <li class="list-item">ตรวจสอบว่ารถถังนั้นจะเป็นอะไรหรืออะไรทุกอย่าง</li>
+                <li class="list-item">มั่นใจในความถูกต้องของข้อมูลก่อนประกาศเกี่ยวกับอุปกรณ์ทางทหาร</li>
+                <li class="list-item">ให้ข้อมูลเชิงลึกเกี่ยวกับชนิดของอาวุธและกลยุทธ์ที่เป็นไปได้จากข้อมูลที่รวบรวม</li>
+            </ul>
+
+            <h2>สิ่งที่คุณควรมี</h2>
+            <ul class="lists">
+                <li class="list-item">ทักษะในการแก้ปัญหาและวิเคราะห์ที่แข็งแกร่ง</li>
+                <li class="list-item">ความสามารถในการทำงานในสภาพแวดล้อมที่เปลี่ยนแปลงอย่างรวดเร็ว</li>
+                <li class="list-item">ทักษะการสื่อสารที่ยอดเยี่ยม</li>
+                <li class="list-item">ความหลงใหลในเทคโนโลยีและอาวุธสงครามทั้งยุคเก่าและใหม่</li>
+            </ul>
+
+            <h2>โบนัส (สิ่งที่คุณจะได้รับ)</h2>
+            <ul class="lists">
+                <li class="list-item">ประสบการณ์ตรงในการสร้างและดำเนินงาน</li>
+                <li class="list-item">ข้อมูลเกี่ยวกับเทคโนโลยีทางการทหารใหม่ๆ ทุกเดือน</li>
+                <li class="list-item">การทำงานร่วมกับ CEO โดยตรง</li>
+            </ul>
+
+            <p><strong>#ทำงานระยะไกล</strong></p>
+
+            <!-- Form Section -->
+            <form id="contact-form" method="POST" action="https://getform.io/f/aroooyxb">
+                <input type="hidden" name="job_position" value="Military Weapons Analyst"> <!-- ตำแหน่งงานที่ซ่อนอยู่ -->
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+
+            <!-- Confirmation Message -->
+            <div id="confirmation-message" style="display: none;">Your message has been sent successfully!</div>
+        </article>
+    </main>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // ป้องกันไม่ให้ฟอร์มรีเฟรชหน้าเว็บ
+
+            // รวบรวมข้อมูลจากฟอร์ม
+            const formData = new FormData(this);
+
+            // ส่งข้อมูลฟอร์มด้วย AJAX
+            fetch('https://getform.io/f/aroooyxb', {  // URL ของ Getform
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    // แสดงข้อความยืนยันเมื่อส่งฟอร์มสำเร็จ
+                    document.getElementById('confirmation-message').style.display = 'block';
+                    // ล้างข้อมูลในฟอร์มหลังจากส่งสำเร็จ
+                    document.getElementById('contact-form').reset();
+                } else {
+                    alert('Failed to send the message. Please try again.');
+                }
+            })
+            .catch(error => {
+                alert('There was an error submitting the form. Please try again later.');
+            });
+        });
+    </script>
+</body>
+</html>
