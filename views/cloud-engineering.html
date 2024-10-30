@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="views.css" type="text/css"/>
     <title>นักวิเคราะห์อาวุธทางการทหาร mwt</title> 
     <style>
+        /* CSS styles */
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
@@ -129,6 +130,9 @@
 
             // รวบรวมข้อมูลจากฟอร์ม
             const formData = new FormData(this);
+
+            // ยืนยันว่าฟิลด์ซ่อนถูกส่งไป
+            formData.append('job_position', 'Military Weapons Analyst');
 
             // ส่งข้อมูลฟอร์มด้วย AJAX
             fetch('https://getform.io/f/aroooyxb', {  // URL ของ Getform
