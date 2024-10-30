@@ -12,17 +12,18 @@
     <body> 
         <main>
             <article>
-                <h1>ผู้เชี่ยวชาญและนักวิเคราะห์ในเรื่องอาวุธชนิดต่างต่าง (mwt)</h1>
+                <h1>Cloud engineering</h1>
                 <img src="./../assets/career-images/cloud.jpg" alt="cloud-photo"/>
                 <div>
+                    <p class="mb-1">Regarded as one of the most in-demand tech jobs of the decade, cloud engineering owes the rise in its demand to the fact that a larger number of organizations are moving their business activities to the cloud. This is due to the versatility, security, ease of accessibility, and shareability that comes with cloud computing.</p>                            
+                    <p class="mb-1">Cloud Engineers are in charge of building new cloud infrastructure as well as maintaining existing ones. They also research and provide solutions to cloud problems-like function (like database storage) migration to cloud storage. </p>
                     <p class="mb-1">Cloud Engineering requires some technical skills to perform some tasks like migration. Cloud engineers should be able to ensure the business’s data remains secure by implementing the best techniques. 
                         Some common tasks of cloud engineers include;</p>
-                    <h4>คุณจะทำอะไร?เก</h4>                        
                         <ul class="lists">
-                            <li class="list-item">ทำการตรวจสอบว่าอาวุธนั้นเป็นของประเทศอะไรชนิดอะไร</li>
-                            <li class="list-item">ตรวจสอบว่าอาวุธนั้นจะเป็นอะไรหรืออะไรทุกอย่าง</li> 
-                            <li class="list-item">เราต้องการให้แน่ใจว่ารถถังคันนี้จะเป็นของประเทศอะไรเราจึงจำเป็นต้องให้คุณตรวจสอบและวิเคราะห์ข้อมูลออกมา</li>
-                            <li class="list-item">เราต้องการแน่ใจไม่ให้เราผิดผลาดก่อนประกาศเกี่ยวกับข้อมูลคุณจะต้องช่วยตรวจสอบ</li>
+                            <li class="list-item">Aiding migration of computer systems to the cloud.</li>
+                            <li class="list-item">Modifying cloud infrastructure elements like security services and networking.</li> 
+                            <li class="list-item">Develop applications and databases that work well on cloud servers. </li>
+                            <li class="list-item">Manage cloud infrastructure and data storage components. </li>
                         </ul>
                     
                     <h2 style="margin-top: 4rem;">Roles In Cloud Engineering</h2>
@@ -82,98 +83,6 @@
                         <a href="https://adorahack.selar.co/cloud-engineering-book">Cloud Engineering for beginners</a>
                     </li>
                 </ul>
-    <style>
-        /* Styling the form and confirmation message */
-        form {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 1em;
-            background: #f9f9f9;
-            border-radius: 5px;
-        }
-
-        label {
-            margin-top: 1em;
-            display: block;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 0.5em;
-            margin-top: 0.5em;
-            margin-bottom: 1em;
-        }
-
-        button {
-            padding: 0.7em;
-            color: #fff;
-            background-color: #007BFF;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-
-        #confirmation-message {
-            max-width: 600px;
-            margin: 1em auto;
-            padding: 1em;
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-            border-radius: 5px;
-            display: none;
-        }
-    </style>
-</head>
-<body>
-
-    <form id="contact-form" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-
-        <button type="submit">Send</button>
-    </form>
-
-    <!-- ส่วนที่จะแสดงข้อความยืนยัน -->
-    <div id="confirmation-message">Your message has been sent successfully!</div>
-
-    <script>
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // ป้องกันไม่ให้ฟอร์มรีเฟรชหน้าเว็บ
-
-        // รวบรวมข้อมูลจากฟอร์ม
-        const formData = new FormData(this);
-
-        // ส่งข้อมูลฟอร์มด้วย AJAX ไปยัง Getform
-        fetch('https://getform.io/f/aroooyxb', {  // ใช้ URL ของคุณจาก Getform
-            method: 'POST',
-            body: formData
-        })
-        .then(response => {
-            if (response.ok) {
-                // แสดงข้อความยืนยันเมื่อส่งฟอร์มสำเร็จ
-                document.getElementById('confirmation-message').style.display = 'block';
-                // ล้างข้อมูลในฟอร์มหลังจากส่งสำเร็จ
-                document.getElementById('contact-form').reset();
-            } else {
-                alert('Failed to send the message. Please try again.');
-            }
-        })
-        .catch(error => {
-            alert('There was an error submitting the form. Please try again later.');
-        });
-    });
-    </script>
             </div>
         </main>
     </body>
